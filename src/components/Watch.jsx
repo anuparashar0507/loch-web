@@ -2,15 +2,15 @@ import mg from "../assets/Cohorts1.png";
 import eyeIcon from "../assets/Eye.svg";
 const Watch = () => {
   return (
-    <div className="grid grid-cols-2 items-center pr-[62px] gap-8 mt-12">
-      <div>
+    <div className="flex flex-col-reverse md:flex-row items-center justify-start md:pr-[62px] gap-8 md:mt-12">
+      <div className="max-h-[306px] left-0 -ml-12 overflow-hidden">
         <img
           src={mg}
-          className="shadow-[0px_8px_22px_-6px_rgba(24, 39, 75, 0.12), 0px_14px_64px_-4px_rgba(24, 39, 75, 0.12)] object-none rounded-xl"
+          className="shadow-[0px_8px_22px_-6px_rgba(24, 39, 75, 0.12), 0px_14px_64px_-4px_rgba(24, 39, 75, 0.12)] rounded-xl"
         />
       </div>
       <div className="flex flex-col items-end gap-4 max-w-[305px]">
-        <img src={eyeIcon} className="h-max w-max"></img>
+        <img src={eyeIcon} className="h-max w-max" />
         <h4 className="text-[31px] leading-[37.2px] text-background text-end stroke-black stroke-2 drop-shadow-[0px_4px_4px_0px_rgba(0, 0, 0, 0.25)]">
           Watch what the whales are doing
         </h4>

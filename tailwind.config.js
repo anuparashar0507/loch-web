@@ -10,6 +10,7 @@ export default {
       },
       colors: {
         gray: {
+          50: "#E5E5E6",
           100: "#E5E5E6",
           200: "#CACBCC",
           300: "#B0B1B3",

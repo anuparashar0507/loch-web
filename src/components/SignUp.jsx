@@ -1,6 +1,6 @@
 const SignUp = () => {
   return (
-    <div className="max-w-[365px] max-h-[347px] flex flex-col gap-8 align-middle items-center justify-between rounded-lg mx-auto my-auto">
+    <div className="max-w-[365px] h-max py-16 md:max-h-[347px] flex flex-col gap-8 align-middle items-center justify-between rounded-lg mx-auto my-auto">
       <h3 className="text-[39px] leading-[46.8px] text-gray-300">
         Sign up for exclusive access.
       </h3>

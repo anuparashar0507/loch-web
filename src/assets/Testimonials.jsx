@@ -23,14 +23,14 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="flex flex-col justify-end gap-5">
-      <h5 className="text-[25px] pr-[62px] text-end leading-[30px] text-background line-clamp-3 max-h-[53px]">
+    <div className="flex flex-col justify-end pr-[62px] gap-5">
+      <h5 className="text-[25px] text-end leading-[30px] text-background line-clamp-3 max-h-[53px]">
         Testimonials
       </h5>
-      <div className="h-px mr-[62px] bg-gray-50 mb-6" />
-      <div className="flex flex-col md:flex-row gap-10 align-bottom items-end h-min">
+      <div className="h-px bg-gray-50 mb-6" />
+      <div className="flex gap-10 align-bottom items-end h-min">
         <img src={logo} className="w-[60px] h-[60px]" />
-        <div className="flex max-w-screen-md gap-2 md:gap-5 overflow-x-auto">
+        <div className="flex gap-5">
           {testimonials.map((testimonial, i) => {
             return (
               <TestimonialCard

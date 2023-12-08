@@ -2,7 +2,7 @@ import mg from "../assets/mg.png";
 import bellIcon from "../assets/Bell.png";
 const Notification = () => {
   return (
-    <div className="w-full h-max grid grid-cols-2 items-end">
+    <div className="w-full h-max grid md:grid-cols-2 grid-cols-1 items-end">
       <div className="flex flex-col gap-4 max-w-[322px]">
         <img src={bellIcon} className="h-8 w-8"></img>
         <h4 className="text-[31px] leading-[37.2px] text-background stroke-black stroke-2 drop-shadow-[0px_4px_4px_0px_rgba(0, 0, 0, 0.25)]">
@@ -21,3 +21,15 @@ const Notification = () => {
 };
 
 export default Notification;
+
+/* Frame 427319432 */
+
+// position: absolute;
+// width: 407px;
+// height: 304px;
+// left: 393px;
+// top: 44px;
+
+// background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.921569) 27.6%, #FFFFFF 53.13%, rgba(255, 255, 255, 0.666667) 81.77%, rgba(255, 255, 255, 0) 100%);
+
+// ***************************** //
