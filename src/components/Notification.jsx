@@ -1,5 +1,6 @@
-import mg from "../assets/mg.png";
+// import mg from "../assets/mg.png";
 import bellIcon from "../assets/Bell.png";
+import NotificationCards from "./NotificationCards";
 const Notification = () => {
   return (
     <div className="w-full h-max grid md:grid-cols-2 grid-cols-1 items-end">
@@ -13,8 +14,9 @@ const Notification = () => {
           on-chain or when a dormant whale you care about becomes active.
         </p>
       </div>
-      <div>
-        <img src={mg} className="max-w-[407px] max-h-[304px]" />
+      <div className="max-w-[407px] max-h-[304px]">
+        {/* <img src={mg} className="max-w-[407px] max-h-[304px]" /> */}
+        <NotificationCards />
       </div>
     </div>
   );

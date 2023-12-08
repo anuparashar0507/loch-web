@@ -1,9 +1,58 @@
+import { useRef } from "react";
 import PropTypes from "prop-types";
-const TestimonialCard = ({ name, role, message }) => {
+
+const TestimonialCard = ({
+  name,
+  role,
+  message,
+  isVisible,
+  onClick,
+  onDragStart,
+  onDragEnd,
+  onDrag,
+}) => {
+  const cardRef = useRef(null);
+
+  const handleDragStart = (e) => {
+    e.preventDefault();
+    onDragStart(e.clientX); // Pass the clientX to the handler
+    e.dataTransfer.setData("text/plain", ""); // Necessary for Firefox
+  };
+
+  const handleDragEnd = () => {
+    onDragEnd();
+  };
+
+  const handleDrag = (e) => {
+    e.preventDefault();
+    onDrag(e.clientX); // Pass the clientX to the handler
+  };
+
+  const handleMouseLeave = () => {
+    onDragEnd();
+  };
+
+  const cardStyle = {
+    width: isVisible ? "353px" : "353px",
+    opacity: isVisible ? "1" : "0.75",
+    transition: "width 0.5s, opacity 0.5s",
+    cursor: "grab",
+  };
+
   return (
-    <div className="p-5 cursor-pointer rounded-xl min-w-[353px] w-max flex flex-col gap-2 max-h-[136px] bg-white shadow-[0px_1px_1px_0px_rgba(0, 0, 0, 0.04), 0px_4px_10px_0px_rgba(0, 0, 0, 0.04)]">
+    <div
+      ref={cardRef}
+      className="p-5 rounded-xl min-w-[353px] flex flex-col gap-2 max-h-[136px] bg-white shadow-[0px_1px_1px_0px_rgba(0, 0, 0, 0.04), 0px_4px_10px_0px_rgba(0, 0, 0, 0.04)]"
+      style={cardStyle}
+      onClick={onClick}
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+      onDrag={handleDrag}
+      onMouseLeave={handleMouseLeave}
+      draggable="true"
+    >
       <div className="flex gap-2">
-        <p className=" font-medium text-[16px] leading-[19.2px] text-gray-900 ">
+        <p className="font-medium text-[16px] leading-[19.2px] text-gray-900">
           {name}
         </p>
         <p className="text-[13px] leading-[15.6px] text-gray-400 ">{role}</p>
@@ -21,6 +70,11 @@ TestimonialCard.propTypes = {
   name: PropTypes.string,
   role: PropTypes.string,
   message: PropTypes.string,
+  isVisible: PropTypes.bool,
+  onClick: PropTypes.func,
+  onDragStart: PropTypes.func,
+  onDragEnd: PropTypes.func,
+  onDrag: PropTypes.func,
 };
 
 export default TestimonialCard;
