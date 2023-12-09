@@ -6,18 +6,21 @@ const testimonials = [
   {
     name: "Jack F",
     role: "Ex Blackrock PM",
+    width: "353px",
     message:
       "“Love how Loch integrates portfolio analytics and whale watching into one unified app.”",
   },
   {
     name: "Yash P",
     role: "Research, 3poch Crypto Hedge Fund",
+    width: "353px",
     message:
       "“I use Loch every day now. I don't think I could analyze crypto whale trends markets without it. I'm addicted!”",
   },
   {
     name: "Shiv S",
     role: "Co-Founder Magik Labs",
+    width: "531px",
     message:
       "“Managing my own portfolio is helpful and well designed. What’s really interesting is watching the whales though. No one else has made whale tracking so simple.”",
   },
@@ -96,12 +99,12 @@ const Testimonials = () => {
 
   return (
     <div className="flex flex-col justify-end gap-5">
-      <h5 className="text-[25px] pr-[62px] text-end leading-[30px] text-background line-clamp-3 max-h-[53px]">
+      <h5 className="text-[25px] md:pr-[62px] text-end leading-[30px] text-background line-clamp-3 max-h-[53px]">
         Testimonials
       </h5>
-      <div className="h-px mr-[62px] bg-gray-50 mb-6" />
+      <div className="h-px md:mr-[62px] bg-gray-50 mb-6" />
       <div className="max-w-full overflow-hidden">
-        <div className="flex flex-col md:flex-row gap-10 align-bottom items-end h-min">
+        <div className="flex flex-col-reverse md:flex-row gap-10 align-bottom items-end h-min">
           <img src={logo} alt="Logo" className="w-[60px] h-[60px]" />
           <div
             className="flex max-w-screen-md gap-2 md:gap-5 overflow-x-hidden"
@@ -120,6 +123,7 @@ const Testimonials = () => {
                 onDragStart={handleDragStart}
                 onDragEnd={handleDragEnd}
                 onDrag={handleDragMove}
+                width={testimonial.width}
               />
             ))}
           </div>

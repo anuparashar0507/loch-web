@@ -2,8 +2,8 @@ import mg from "../assets/Cohorts1.png";
 import eyeIcon from "../assets/Eye.svg";
 const Watch = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-start md:pr-[62px] gap-8 md:mt-12">
-      <div className="max-h-[306px] left-0 -ml-12 overflow-hidden">
+    <div className="flex flex-col-reverse md:flex-row items-center md:justify-start justify-center md:pr-[62px] gap-8 md:mt-12">
+      <div className="md:max-h-[306px] md:left-0 md:-ml-12 overflow-hidden">
         <img
           src={mg}
           className="shadow-[0px_8px_22px_-6px_rgba(24, 39, 75, 0.12), 0px_14px_64px_-4px_rgba(24, 39, 75, 0.12)] rounded-xl"

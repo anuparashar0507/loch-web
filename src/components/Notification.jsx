@@ -9,14 +9,14 @@ const Notification = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     // cssEase: "linear",
     pauseOnHover: true,
     prevArrow: null,
     nextArrow: null,
   };
   return (
-    <div className="w-full h-max grid md:grid-cols-2 grid-cols-1 items-end">
+    <div className="w-full h-max grid md:grid-cols-2 grid-cols-1 md:items-start items-center gap-8 md:gap-0">
       <div className="flex flex-col gap-4 max-w-[322px]">
         <img src={bellIcon} className="h-8 w-8"></img>
         <h4 className="text-[31px] leading-[37.2px] text-background stroke-black stroke-2 drop-shadow-[0px_4px_4px_0px_rgba(0, 0, 0, 0.25)]">
@@ -27,16 +27,16 @@ const Notification = () => {
           on-chain or when a dormant whale you care about becomes active.
         </p>
       </div>
-      <div className="max-w-[420px] p-6 overflow-clip">
+      <div className="max-w-[420px] px-6 py-2 overflow-clip bg">
         {/* <img src={mg} className="max-w-[407px] max-h-[304px]" /> */}
-        <div className="w-[420px]">
-          <Slider {...settings}>
+        <div className="relative w-[420px]">
+          <div className="absolute inset-0 z-10  bg-gradient-to-r from-[#165DFF] from-2% via-transparent via-20% to-slate-900 to-90% from-opacity-5 via-opacity-100 to-opacity-50 opacity-20"></div>
+          <Slider arrows={false} {...settings}>
             <Card1 />
             <Card2 />
             <Card3 />
           </Slider>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-opacity-0 via-opacity-50 to-opacity-50"></div>
       </div>
     </div>
   );
