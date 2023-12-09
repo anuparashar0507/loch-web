@@ -9,10 +9,7 @@ const SignUp = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    // Check if the email is valid
     if (isValidEmail(email)) {
-      // Simulate redirect using window.location.href
       window.location.href = "https://app.loch.one/welcome";
     } else {
       alert("Please enter a valid email.");

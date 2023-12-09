@@ -17,7 +17,7 @@ const TestimonialCard = ({
   const handleDragStart = (e) => {
     e.preventDefault();
     onDragStart();
-    e.dataTransfer.setData("text/plain", ""); // Necessary for Firefox
+    e.dataTransfer.setData("text/plain", "");
   };
 
   const handleDragEnd = () => {

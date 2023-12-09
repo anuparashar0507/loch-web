@@ -4,13 +4,11 @@ import bellIcon from "../assets/Bell.png";
 import { Card1, Card2, Card3 } from "./NotificationCards";
 const Notification = () => {
   const settings = {
-    // dots: true,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    // cssEase: "linear",
     pauseOnHover: true,
     prevArrow: null,
     nextArrow: null,
