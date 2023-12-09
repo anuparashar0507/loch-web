@@ -1,7 +1,20 @@
 // import mg from "../assets/mg.png";
+import Slider from "react-slick";
 import bellIcon from "../assets/Bell.png";
-import NotificationCards from "./NotificationCards";
+import { Card1, Card2, Card3 } from "./NotificationCards";
 const Notification = () => {
+  const settings = {
+    // dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // cssEase: "linear",
+    pauseOnHover: true,
+    prevArrow: null,
+    nextArrow: null,
+  };
   return (
     <div className="w-full h-max grid md:grid-cols-2 grid-cols-1 items-end">
       <div className="flex flex-col gap-4 max-w-[322px]">
@@ -14,24 +27,19 @@ const Notification = () => {
           on-chain or when a dormant whale you care about becomes active.
         </p>
       </div>
-      <div className="max-w-[407px] max-h-[304px]">
+      <div className="max-w-[420px] p-6 overflow-clip">
         {/* <img src={mg} className="max-w-[407px] max-h-[304px]" /> */}
-        <NotificationCards />
+        <div className="w-[420px]">
+          <Slider {...settings}>
+            <Card1 />
+            <Card2 />
+            <Card3 />
+          </Slider>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-opacity-0 via-opacity-50 to-opacity-50"></div>
       </div>
     </div>
   );
 };
 
 export default Notification;
-
-/* Frame 427319432 */
-
-// position: absolute;
-// width: 407px;
-// height: 304px;
-// left: 393px;
-// top: 44px;
-
-// background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.921569) 27.6%, #FFFFFF 53.13%, rgba(255, 255, 255, 0.666667) 81.77%, rgba(255, 255, 255, 0) 100%);
-
-// ***************************** //

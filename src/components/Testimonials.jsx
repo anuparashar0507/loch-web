@@ -32,7 +32,6 @@ const Testimonials = () => {
   const testimonialsRef = useRef(null);
 
   useEffect(() => {
-    // Hide horizontal scrollbar
     const handleScroll = () => {
       testimonialsRef.current.style.overflow = "hidden";
     };
@@ -71,7 +70,6 @@ const Testimonials = () => {
     setDragging(false);
     const dragEnd = new Date().getTime();
     if (dragEnd - dragStart < 300) {
-      // If the drag duration is less than 300ms, consider it a click
       const newVisibleCards = Array.from(
         { length: testimonials.length },
         (_, i) => i === 0
@@ -88,10 +86,8 @@ const Testimonials = () => {
 
     let scrollPosition;
     if (index === 0) {
-      // First card is leftmost
       scrollPosition = 0;
     } else {
-      // Calculate the scroll position with a fixed margin
       scrollPosition = index * (cardWidth - spacing) - fixedMargin;
     }
 
